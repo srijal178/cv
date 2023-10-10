@@ -3,6 +3,12 @@ import cv2
 # Initialize the camera
 cap = cv2.VideoCapture(0)
 
+# Set the desired frame rate (adjust this value as needed)
+desired_fps = 30  # You can change this to your desired frame rate
+
+# Check if the camera supports the desired frame rate
+cap.set(cv2.CAP_PROP_FPS, desired_fps)
+
 while True:
     # Capture a frame from the camera
     ret, frame = cap.read()
