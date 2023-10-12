@@ -1,7 +1,10 @@
 import cv2
-
+desired_width=640
+desired_height=480
 # Initialize the camera
 cap = cv2.VideoCapture(0)
+cap.set (3, desired_width)
+cap.set (4, desired_height)
 
 # Set the desired frame rate (adjust this value as needed)
 desired_fps = 30  # You can change this to your desired frame rate
